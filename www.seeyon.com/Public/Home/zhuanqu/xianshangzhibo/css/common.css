@@ -1,0 +1,1108 @@
+@charset "UTF-8";
+body { overflow-x:hidden; }
+
+/*2019-05-16*/
+/*header transparent  &  header position*/
+.header.absolute{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header.absolute .main,
+.header.absolute .main .logo{
+  transition: background .3s ease;
+}
+.header.transparent .main{
+  background: transparent;
+}
+.header.transparent .main .logo{
+  background: none;
+}
+.header.transparent .main .ope form input{
+  color: #fff;
+}
+.header.transparent .main .ope .link{
+  color: #fff;
+}
+.header.transparent .main .nav .nav_btn{
+  border-right: 1px solid rgba(255,255,255,.15);
+}
+.header.transparent .main .nav .nav_btn span{
+  color: #fff;
+}
+.header.transparent .main .nav .nav_btn i{
+  background-image: url(../images/icon2-white.png);
+}
+.header.transparent .main .ope a.btn.about{
+  background-image: url(https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon9-white.svg);
+}
+.header.transparent .main .ope a.btn.product{
+  background-image: url(https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon10-white.svg);
+}
+.header.transparent .main .ope .contact .link{
+  background-image: url(https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon11-white.svg);
+}
+/*2019-05-16 end*/
+/*header transparent end*/
+
+.header {
+  height: 72px; width:100%; position:relative; z-index:99999; box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+.header .main {
+  position: relative;
+  height: 72px;
+  background: #fff;
+  font-size: 0;
+  z-index: 9;
+}
+.header .main .nav {
+  display: inline-block;
+  vertical-align: top;
+  width: 90px;
+  height: 100%;
+  position: relative;
+}
+.header .main .nav .nav_btn {
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.header .main .nav .nav_btn i {
+  display: block;
+  width: 30px;
+  height: 19px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/icon1.png");
+  -webkit-transition: margin 0.2s linear;
+  -moz-transition: margin 0.2s linear;
+  -ms-transition: margin 0.2s linear;
+  transition: margin 0.2s linear;
+}
+.header .main .nav .nav_btn span {
+  display: block;
+  font-size: 14px;
+  color: #324b5c;
+  line-height: 1;
+  margin-top: 5px;
+  -webkit-transition: opacity 0.15s linear 0.2s;
+  -moz-transition: opacity 0.15s linear 0.2s;
+  -ms-transition: opacity 0.15s linear 0.2s;
+  transition: opacity 0.15s linear 0.2s;
+}
+.header .main .nav .nav_cont {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 5px 10px inset rgba(2, 2, 2, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(40px);
+  -moz-transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  transform: translateY(40px);
+  -webkit-transition: transform 0.3s, opacity 0.35s, visibility 0.1s;
+  -moz-transition: transform 0.3s, opacity 0.35s, visibility 0.1s;
+  -ms-transition: transform 0.3s, opacity 0.35s, visibility 0.1s;
+  transition: transform 0.3s, opacity 0.35s, visibility 0.1s;
+  overflow: hidden;
+  width:auto;
+}
+.header .main .nav .nav_cont:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #e6e6e6;
+  position: absolute;
+  top: -10px;
+  left: 25px;
+}
+.header .main .nav .nav_cont ul {
+  width: 260px;
+  padding: 1.5vw 0 4.5vw;
+  background: #e6e6e6;
+  height: calc(465px + 6vw);
+}
+.header .main .nav .nav_cont ul li {
+  margin-top: 5px; float:none; width:auto; height:auto; line-height:auto; text-align:left;
+}
+.header .main .nav .nav_cont ul li:first-of-type {
+  margin-top: 0;
+}
+.header .main .nav .nav_cont ul li a.tit {
+  display: block;
+  font-size: 15px;
+  line-height: 42px;
+  color: #464646;
+  padding: 0 30px;
+}
+.header .main .nav .nav_cont ul li a.tit:hover {
+  transition-delay: 0s !important;
+  background-color: #ededed;
+  color: #108cee;
+}
+.header .main .nav .nav_cont ul li.menu > a.tit {
+  background-repeat: no-repeat;
+  background-position: 85% center;
+  background-image: url("../images/icon14.png");
+}
+.header .main .nav .nav_cont ul li.menu > a.tit:hover {
+  background-image: url("../images/icon15.png");
+}
+.header .main .nav .nav_cont ul li.open > a.tit {
+  color: #108cee;
+  background-color: #f0f0f0;
+  background-image: url("../images/icon15.png");
+}
+.header .main .nav .nav_cont ul li.open > .block {
+  width: 520px;
+  z-index: 3;
+  visibility: visible;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul {
+  -webkit-transition: transform 0.2s linear;
+  -moz-transition: transform 0.2s linear;
+  -ms-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  transition-delay: .2s;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > h3 {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  transition-delay: 0.2s, 0.3s;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > li > a.tit {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  transition-delay: 0.2s, 0.3s;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > li:nth-of-type(2) > a.tit {
+  transition-delay: 218ms, 318ms;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > li:nth-of-type(3) > a.tit {
+  transition-delay: 236ms, 336ms;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > li:nth-of-type(4) > a.tit {
+  transition-delay: 254ms, 354ms;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > li:nth-of-type(5) > a.tit {
+  transition-delay: 272ms, 372ms;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > li:nth-of-type(6) > a.tit {
+  transition-delay: 290ms, 390ms;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > li:nth-of-type(7) > a.tit {
+  transition-delay: 308ms, 408ms;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > li:nth-of-type(8) > a.tit {
+  transition-delay: 326ms, 426ms;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > li:nth-of-type(9) > a.tit {
+  transition-delay: 344ms, 444ms;
+}
+.header .main .nav .nav_cont ul li.open > .block > ul > a.more {
+  opacity: 1;
+  transition-delay: .5s;
+}
+.header .main .nav .nav_cont ul li.close .block {
+  visibility: hidden;
+}
+.header .main .nav .nav_cont ul li.close .block ul.ul {
+  transition-delay: 0s;
+}
+.header .main .nav .nav_cont ul a.more {
+  position: absolute;
+  bottom: 2vw;
+  left: 30px;
+  font-size: 15px;
+  color: #108cee;
+  opacity: 0;
+}
+.header .main .nav .nav_cont ul.ul2 li.open > a.tit {
+  background-color: #fafafa;
+}
+.header .main .nav .nav_cont ul.ul2 li:hover > a.tit {
+  background-color: #fafafa;
+}
+.header .main .nav .nav_cont ul.ul3 li:hover > a.tit {
+  background-color: #fff;
+}
+.header .main .nav .nav_cont .block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 260px;
+  overflow: hidden;
+  z-index: 1;
+  visibility: hidden;
+}
+.header .main .nav .nav_cont .block ul.ul {
+  width: 260px;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  transition-delay: 1s;
+}
+.header .main .nav .nav_cont .block ul.ul.ul2 {
+  background: #f0f0f0;
+}
+.header .main .nav .nav_cont .block ul.ul.ul3 {
+  background: #fafafa;
+}
+.header .main .nav .nav_cont .block ul.ul h3 {
+  font-size: 16px;
+  color: #464646;
+  margin: 0 30px 5px;
+  line-height: 42px;
+  border-bottom: 1px solid #dddddd;
+  opacity: 0;
+  -webkit-transform: translateX(-110%);
+  -moz-transform: translateX(-110%);
+  -ms-transform: translateX(-110%);
+  transform: translateX(-110%);
+  -webkit-transition: transform 0.3s 1s, opacity 0.2s 0s;
+  -moz-transition: transform 0.3s 1s, opacity 0.2s 0s;
+  -ms-transition: transform 0.3s 1s, opacity 0.2s 0s;
+  transition: transform 0.3s 1s, opacity 0.2s 0s;
+}
+.header .main .nav .nav_cont .block ul.ul li {
+  overflow: hidden;
+}
+.header .main .nav .nav_cont .block ul.ul li a.tit {
+  opacity: 0;
+  -webkit-transform: translateX(-110%);
+  -moz-transform: translateX(-110%);
+  -ms-transform: translateX(-110%);
+  transform: translateX(-110%);
+  -webkit-transition: transform 0.3s 1s, opacity 0.2s 0s;
+  -moz-transition: transform 0.3s 1s, opacity 0.2s 0s;
+  -ms-transition: transform 0.3s 1s, opacity 0.2s 0s;
+  transition: transform 0.3s 1s, opacity 0.2s 0s;
+}
+.header .main .nav .nav_cont .block ul.ul a.more {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.header .main .nav:hover .nav_btn i {
+  margin-top: 19px;
+  transition-delay: .1s;
+  background-image: url("../images/icon2.png");
+}
+.header .main .nav:hover .nav_btn span {
+  opacity: 0;
+  transition-delay: 0s;
+}
+.header .main .nav:hover .nav_cont {
+  overflow: inherit;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: transform 0.3s, opacity 0.35s, visibility 0s;
+  -moz-transition: transform 0.3s, opacity 0.35s, visibility 0s;
+  -ms-transition: transform 0.3s, opacity 0.35s, visibility 0s;
+  transition: transform 0.3s, opacity 0.35s, visibility 0s;
+}
+.header .main .nav:hover .nav_cont .block {
+  visibility: visible;
+}
+.header .main .logo {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  background: #108cee;
+  display: inline-block;
+  vertical-align: top;
+  padding-top:0px;
+}
+.header .main .logo img {
+  height: 40px;
+}
+.header .main .ope {
+  float: right;
+  padding-right: 30px;
+}
+.header .main .ope form, .header .main .ope a, .header .main .ope .contact {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .main .ope form {
+  width: 225px;
+  height: 42px;
+  position: relative;
+  padding-right: 40px;
+  border: 1px solid transparent;
+  -webkit-transition: border 0.2s linear;
+  -moz-transition: border 0.2s linear;
+  -ms-transition: border 0.2s linear;
+  transition: border 0.2s linear;
+}
+.header .main .ope form.focus {
+  border-color: #108cee;
+}
+.header .main .ope form.focus button {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon8_on.svg");
+}
+.header .main .ope form input {
+  padding: 0 10px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+}
+.header .main .ope form .but01 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 20px 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.header .main .ope form input.search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 20px 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.header .main .ope form button {
+  position: absolute; display:none;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon8.svg");
+  background-size: 20px 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.header .main .ope .link {
+  font-size: 16px;
+  color: #324b5c;
+  line-height: 42px;
+  padding-right: 30px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: auto 20px;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+.header .main .ope a.btn {
+  margin-left: 3vw;
+  padding-top: 15px;
+  padding-bottom: 15px; margin-top:0px; margin-bottom:0px; background-color:transparent; width:auto; height:auto;
+}
+.header .main .ope a.btn.about {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon9.svg");
+}
+.header .main .ope a.btn.product {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon10.svg");
+}
+.header .main .ope a.btn:hover {
+  color: #108cee;
+}
+.header .main .ope a.btn.about:hover {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon9_on.svg");
+}
+.header .main .ope a.btn.product:hover {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon10_on.svg");
+}
+.header .main .ope .contact {
+  margin-left: 3vw;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.header .main .ope .contact .link {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon11.svg");
+}
+.header .main .ope .contact .hover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #f5f5f5;
+  padding: 5px 35px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(40px);
+  -moz-transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  transform: translateY(40px);
+  -webkit-transition: transform 0.3s, opacity 0.25s, visibility 0.1s;
+  -moz-transition: transform 0.3s, opacity 0.25s, visibility 0.1s;
+  -ms-transition: transform 0.3s, opacity 0.25s, visibility 0.1s;
+  transition: transform 0.3s, opacity 0.25s, visibility 0.1s;
+}
+.header .main .ope .contact .hover:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 14px solid #f5f5f5;
+  position: absolute;
+  top: -14px;
+  right: 40px;
+}
+.header .main .ope .contact .hover .item {
+  padding: 30px 0;
+  overflow: hidden;
+  padding-right: 3vw;
+}
+.header .main .ope .contact .hover .item i {
+  float: left;
+  width: 60px;
+  height: 60px;
+  background-color: #108cee;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px auto;
+}
+.header .main .ope .contact .hover .item h3 {
+  margin-left: 76px;
+  font-size: 18px;
+  color: #333;
+  white-space: nowrap;
+  margin-top: 5px;
+  text-align:left;
+}
+.header .main .ope .contact .hover .item p {
+  margin-left: 76px;
+  font-size: 16px;
+  color: #808080;
+  white-space: nowrap;
+  margin-top: 10px;
+}
+.header .main .ope .contact .hover .item a {
+  margin-left: 76px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #108cee;
+  display: block;
+  text-align:left;
+}
+.header .main .ope .contact .hover .item a:hover {
+  color: #0056a5;
+}
+.header .main .ope .contact .hover .item:nth-of-type(1) {
+  border-bottom: 1px solid #e6e6e6;
+}
+.header .main .ope .contact .hover .item:nth-of-type(1) i {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon12.svg");
+}
+.header .main .ope .contact .hover .item:nth-of-type(2) i {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon13.svg");
+}
+.header .main .ope .contact:hover .link {
+  color: #108cee;
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon11_on.svg");
+}
+.header .main .ope .contact:hover .hover {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: transform 0.3s, opacity 0.25s, visibility 0s;
+  -moz-transition: transform 0.3s, opacity 0.25s, visibility 0s;
+  -ms-transition: transform 0.3s, opacity 0.25s, visibility 0s;
+  transition: transform 0.3s, opacity 0.25s, visibility 0s;
+}
+
+.footer {
+  background: #091924;
+  /*padding-bottom:0px!important;*/
+  padding-top: 4.58vw;
+  width:100%!important;
+}
+.footer .main {
+  position: relative;
+  text-align: center;
+  font-size: 0;
+  padding-left: 4.5vw;
+}
+.footer .main .left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 4vw;
+  background: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon3.svg") left top no-repeat;
+  background-size: 2.6vw auto;
+  text-align: left;
+}
+.footer .main .left .item:nth-of-type(1) {
+  margin-bottom: 30px;
+}
+.footer .main .left .item h3 {
+  font-size: 18px;
+  color: #fff;
+}
+.footer .main .left .item p {
+  font-family: 'DIN';
+  font-size: 32px;
+  color: #108cee;
+}
+.footer .main .center {
+  display: inline-block;
+  padding: 0 7.8vw;
+  text-align: left;
+  border-left: 1px solid #3a4750;
+  border-right: 1px solid #3a4750;
+}
+.footer .main .center .item {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 4vw;
+}
+.footer .main .center .item:last-of-type {
+  margin-right: 0;
+}
+.footer .main .center .item h3 {
+  font-size: 18px;
+  color: #fff;
+}
+.footer .main .center .item .a_block {
+  margin-top: 30px;
+}
+.footer .main .center .item .a_block a {
+  display: block;
+  font-size: 14px;
+  color: #c7c7c7;
+  margin-bottom: 15px;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  transition: all 500ms ease;
+  position: relative;
+}
+.footer .main .center .item .a_block a:after {
+  content: '';
+  width: 0;
+  height: 1px;
+  background: #108cee;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.footer .main .center .item .a_block a:hover {
+  color: #108cee;
+}
+.footer .main .center .item .a_block a:hover:after {
+  width: 60px;
+}
+.footer .main .right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 170px;
+  text-align: left;
+  font-size: 0;
+}
+.footer .main .right .box {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.footer .main .right .box i {
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.footer .main .right .box .hover {
+  position: absolute;
+  top: 28px;
+  left: 0;
+}
+.footer .main .right .box .hover:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+}
+.footer .main .right .box:nth-of-type(1) i {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon4_on.svg");
+  background-size: 18px auto;
+}
+.footer .main .right .box:nth-of-type(1) .hover {
+  width: 170px;
+}
+.footer .main .right .box:nth-of-type(1) .hover .tab_c {
+  width: 140px;
+}
+.footer .main .right .box:nth-of-type(1) .hover .tab_c .child {
+  display: none;
+}
+.footer .main .right .box:nth-of-type(1) .hover .tab_c img {
+  width: 140px;
+  display: block;
+}
+.footer .main .right .box:nth-of-type(1) .hover .tab_c p {
+  font-size: 14px;
+  color: #c7c7c7;
+  margin-top: 10px;
+  line-height: 1;
+}
+.footer .main .right .box:nth-of-type(1) .hover .tab_t {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+}
+.footer .main .right .box:nth-of-type(1) .hover .tab_t span {
+  display: block;
+  width: 30px;
+  height: 70px;
+  line-height: 16px;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 5px;
+  text-align: center;
+  background: #108cee;
+  cursor: pointer;
+}
+.footer .main .right .box:nth-of-type(1) .hover .tab_t span.active {
+  background: #fff;
+  color: #108cee;
+}
+.footer .main .right .box:nth-of-type(2) i {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon5.svg");
+  background-size: 16px auto;
+}
+.footer .main .right .box:nth-of-type(2) .hover {
+  width: 130px;
+  background: #fff;
+  padding: 15px 0;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  transform: translateY(30px);
+  -webkit-transition: transform 0.3s, opacity 0.25s, visibility 0.1s;
+  -moz-transition: transform 0.3s, opacity 0.25s, visibility 0.1s;
+  -ms-transition: transform 0.3s, opacity 0.25s, visibility 0.1s;
+  transition: transform 0.3s, opacity 0.25s, visibility 0.1s;
+}
+.footer .main .right .box:nth-of-type(2) .hover a {
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+  margin: 0 5px 0 5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #108cee;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.footer .main .right .box:nth-of-type(2) .hover a.sina {
+  background-image: url("../images/icon6.png");
+}
+.footer .main .right .box:nth-of-type(2) .hover a.qq {
+  background-image: url("../images/icon7.png");
+}
+.footer .main .right .box:nth-of-type(2):hover i {
+  background-image: url("https://www.seeyon.com/Public/Home/zhuanqu/xianshangzhibo/images/icon5_on.svg");
+}
+.footer .main .right .box:nth-of-type(2):hover .hover {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: transform 0.3s, opacity 0.25s, visibility 0s;
+  -moz-transition: transform 0.3s, opacity 0.25s, visibility 0s;
+  -ms-transition: transform 0.3s, opacity 0.25s, visibility 0s;
+  transition: transform 0.3s, opacity 0.25s, visibility 0s;
+}
+.footer .link_box {
+  margin-top: 2.6vw;
+  position: relative;
+  padding-left: 120px;
+  padding-bottom: 1.25vw;
+  border-bottom: 1px solid #3a4750;
+}
+.footer .link_box .logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top:0px;
+}
+.footer .link_box .logo img {
+  display: block;
+  width: 118px;
+}
+.footer .link_box .link {
+  font-size: 0;
+}
+.footer .link_box .link a {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 0 5px 2.6vw;
+  font-size: 14px;
+  color: #c7c7c7;
+  line-height: 20px;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.footer .link_box .link a:hover {
+  color: #108cee;
+}
+.footer .copyright_box {
+  padding: 1.25vw 0;
+  font-size: 14px;
+  color: #c7c7c7;
+  overflow: hidden;
+}
+.footer .copyright_box p:nth-of-type(1) {
+  float: left;
+}
+.footer .copyright_box p:nth-of-type(2) {
+  float: right;
+}
+.footer .copyright_box p .spacing {
+  margin-left: 20px;
+}
+
+
+
+
+
+@media screen and (max-width: 1500px) {
+  .header {
+    height: 60px;
+  }
+
+  .header .main {
+    height: 60px;
+  }
+
+  .header .main .ope a.btn {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .header .main .ope .link {
+    font-size: 14px;
+  }
+
+  .header .main .ope .contact {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .header .main .ope .contact .hover {
+    padding: 5 25px;
+  }
+
+  .header .main .ope .contact .hover .item {
+    padding: 20px 0;
+  }
+
+  .footer .main .center {
+    padding: 0 5vw;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .footer .copyright_box {
+    text-align: center;
+  }
+
+  .footer .copyright_box p {
+    float: none !important;
+  }
+
+  .footer .copyright_box p:nth-of-type(2) {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer .main .left .item p {
+    font-size: 26px;
+  }
+
+  .footer .main .center .item h3,
+  .footer .main .left .item h3 {
+    font-size: 16px;
+  }
+
+  .footer .main .center .item .a_block {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wrapper {
+    width: 94%;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer .main .center,
+  .footer .main .right {
+    display: none;
+  }
+
+  .footer .main {
+    padding: 0;
+  }
+
+  .footer .main .left {
+    position: static;
+    padding: 0;
+    background: none;
+    text-align: center;
+    display: none;
+  }
+
+  .footer .main .left .item:nth-of-type(1) {
+    margin-bottom: 10px;
+  }
+
+  .footer .link_box {
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    text-align: center;
+  }
+
+  .footer .link_box .logo {
+    position: static;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .footer .link_box .logo img {
+    margin: 0 auto;
+  }
+
+  .footer .copyright_box {
+    padding: 0;
+  }
+
+  .footer .copyright_box span {
+    display: block;
+    margin: 0 !important;
+  }
+}
+
+
+
+
+/*2020-03-23*/
+.header.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+.live-anchor{
+  position: absolute;
+  right: 70px;
+  top: 0;
+  font-size: 0;
+}
+.live-anchor a{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 72px;
+  color: #333333;
+  position: relative;
+  padding: 0 16px;
+  margin-right: 50px;
+  transition: all .3s ease;
+}
+.live-anchor a:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: #0075fa;
+  transform: scaleX(0);
+  transition: all .3s ease;
+}
+.live-anchor a:last-of-type{
+  margin-right: 0;
+}
+.live-anchor a:hover,
+.live-anchor a.active{
+  color: #0075fa;
+}
+.live-anchor a:hover:after,
+.live-anchor a.active:after{
+  transform: scaleX(1);
+}
+.live-head-drop{
+  display: none;
+}
+@media screen and (max-width: 1500px){
+  .live-anchor a{
+    line-height: 60px;
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 1200px){
+  .live-anchor a{
+    font-size: 14px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 992px){
+  .live-anchor{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    background-color: rgba(255,255,255,.9);
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    display: none;
+  }
+  .live-anchor a{
+    width: 33.33%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 36px;
+  }
+  .header{
+    height: 50px;
+  }
+  .header .main{
+    height: 50px;
+  }
+  .header .main .nav{
+    display: none;
+  }
+  .header .main .logo{
+    width: 140px;
+    margin: 0 auto;
+  }
+  .header .main .logo img{
+    height: 30px;
+  }
+  .live-head-drop {
+    display: block;
+    width: 24px;
+    height: 16px;
+    right: 20px;
+    top: 17px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .live-head-drop.active .line2 {
+    display: none;
+  }
+  .live-head-drop.active .line1 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 7px;
+  }
+  .live-head-drop.active .line3 {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: 7px;
+  }
+  .live-head-drop span {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .live-head-drop span.line1 {
+    top: 0;
+  }
+  .live-head-drop span.line2 {
+    top: 7px;
+  }
+  .live-head-drop span.line3 {
+    bottom: 0;
+  }
+}
+/*2020-03-23 end*/
+

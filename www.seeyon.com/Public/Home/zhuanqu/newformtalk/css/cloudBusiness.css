@@ -1,0 +1,142 @@
+@charset "UTF-8";
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei",sans-serif;
+}
+
+html,body{
+    background: #ffffff;
+    font-size:14px;
+    color: #515151;
+}
+.cloudB-section-one{
+    background: url("../images/cloud-business-page-asdfaskjZsdfBg.jpg") center no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 620px;
+    text-align: center;
+    display: block;
+}
+.header-img{
+    padding-top: 100px;
+}
+.header-img img{
+    height: 120px;
+}
+.header-btn-area{
+    margin-top: 50px;
+    text-align: center;
+}
+.header-btn-area a{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+}
+.header-btn-area a.view-btn{
+    background: #2FDCBA;
+    color: #ffffff;
+    margin-right: 40px;
+}
+.header-btn-area a.reg-btn{
+    background: #ffffff;
+    color: #5990cf;
+}
+.mac-img{
+    display: block;
+    margin: 100px auto 0 auto;
+    height: 270px;
+}
+.section-two-text{
+    margin-top: 200px;
+    margin-bottom: 70px;
+}
+.section-two-text img{
+    display: block;
+    height: 50px;
+    margin: 0 auto;
+}
+.section-two-icon img{
+    display: block;
+    height: 400px;
+    margin: 0 auto;
+}
+.cloudB-section-three{
+    background: url("../images/cloud-third-bg.png")center no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 900px;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+}
+.third-text{
+    display: inline-block;
+    vertical-align: top;
+    height: 440px;
+    margin-top: 250px;
+}
+.third-icon{
+    display: inline-block;
+    vertical-align: top;
+    height: 460px;
+    float: right;
+    margin-top: 250px;
+    margin-right: -350px;
+}
+.cloudB-section-four{
+    position: relative;
+}
+.fourth-text{
+    margin: 180px 0;
+}
+.fourth-text img{
+    display: block;
+    height: 360px;
+    margin: 0 auto;
+}
+.fourth-phone-icon{
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -275px;
+    margin-left: -160px;
+}
+.cloudB-section-five{
+    background: url("../images/cloud-five-bg.png")center no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 760px;
+    display: block;
+    text-align: center;
+}
+.cloudB-section-five img.fifth-icon{
+    display: inline-block;
+    vertical-align: top;
+    height: 420px;
+    margin-right: 70px;
+    margin-top: 160px;
+}
+.cloudB-section-five img.fifth-text{
+    display: inline-block;
+    vertical-align: top;
+    height: 140px;
+    margin-top: 280px;
+}
+@media screen and (min-width: 1440px) {
+    .third-icon{
+        float: none;
+        margin-left: 100px;
+        margin-right: 0;
+    }
+}

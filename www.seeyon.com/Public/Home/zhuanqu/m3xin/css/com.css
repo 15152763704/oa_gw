@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+
+.gray{background:url(../images/tou55.png) repeat;position:fixed;_position:absolute;left:0;top:0;width:100%;height:100%;display:none;z-index:99999;}
+
+
+/*.fank{width:728px;height:565px;background:#fff;position:fixed;_position:absolute;padding-left:30px;left:50%;top:50%;margin-left:-414px;margin-top:-274px;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;z-index:99999999;}
+.cloase{position:absolute;right:0;top:0;}
+.fank h3{font-size:26px;color:#333;text-align:center;font-weight:100;height:60px;line-height:60px;}
+.danx{width:100%;height:auto;overflow:hidden;margin-bottom:25px;}
+.danx strong{font-weight:100;font-size:16px;color:#666;margin-right:40px;}
+.danx strong input{margin-right:10px;}
+.inpu{width:100%;height:54px;margin-bottom:10px;}
+.inpu label{display:block;float:left;width:170px;height:48px;line-height:48px;text-align:right;font-size:16px;font-family:"微软雅黑";}
+.inpu input{display:block;float:left;width:390px;height:48px;_line-height:48px;*line-height:48px;line-height:48px\9;padding-left:10px;font-size:18px;font-family:"微软雅黑";background:#e6e6e6;border:0;margin-right:20px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.inpu span{height:48px;line-height:48px;font-size:18px;}
+.inpu .code { float:left; width:129px; padding-top:5px; padding-right:10px; }
+.inpu .refress { float:left; line-height:48px; cursor:pointer; }
+.inpu .code img { width:129px; height:37px; cursor:pointer;}
+.inpu .yzm_text { float:left; width:120px; text-align:center; cursor:pointer; border-radius:5px; background:#2a349c; font-size:14px; color:#fff; line-height:36px; margin:6px 0px 0px 0px; }
+.textd{width:100%;height:auto;margin-bottom:14px;}
+.textd label{display:block;float:left;width:70px;line-height:30px;text-align:center;font-size:16px;}
+.textd textarea{width:573px;height:110px;padding:10px 0 0 10px;font-size:18px;color:#999;font-family:"微软雅黑";background:#e6e6e6;border:0;}
+.fk_btn{width:auto;height:auto;overflow:hidden;padding-left:150px; padding-top:22px;}
+.fk_btn button{display:block;float:left;width:174px;height:42px;border:0;background:#1f2774;font-family:"微软雅黑";border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;font-size:16px;color:#fff;cursor:pointer;}
+.fk_btn button:hover{background:#2a349c}
+.fk_btn button.qx{margin-left:40px;line-height:42px;text-align:center;background:#9e9e9e;}
+.fk_btn button.qx:hover{background:#777;}
+.inpu input.yzm { width:242px; }*/

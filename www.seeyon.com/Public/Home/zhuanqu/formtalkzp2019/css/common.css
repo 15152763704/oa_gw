@@ -1,0 +1,395 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+div, dl, dt, dd, form, h1, h2, h3, h4, h5, h6, img, ol, ul, li, table, th, td, p, span, a {
+    border: 0;
+}
+img {
+    vertical-align: top;
+}
+
+body {
+    font-family: "Microsoft Yahei", "Trebuchet MS", Georgia, "Times New Roman", Times, sans-serif;
+    font-size: 14px;
+    height: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+i {
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+a:focus {
+    outline:none;
+}
+.clear {
+    clear: both;
+}
+/*浏览器友好提示*/
+.browser-info {
+    background: #fee871;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    text-align: center;
+    font-size: 14px;
+    padding: 6px 0;
+}
+/*导航条--开始*/
+.header-nav{
+    background-color: #ffffff;
+    box-shadow:0 8px 10px 0 rgba(0,0,0,.1);
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 80px;
+    -webkit-transition: all 125ms ease;
+    -moz-transition: all 125ms ease;
+    transition: all 125ms ease;
+    -webkit-transition-property: color,fill,stroke,background-color,box-shadow;
+    -moz-transition-property: color,fill,stroke,background-color,box-shadow;
+    transition-property: color,fill,stroke,background-color,box-shadow;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+}
+/*.app-header-with-shadow, .header-nav:hover {*/
+    /*background-color: rgba(255,255,255,.98);*/
+    /*box-shadow: 0 2px 4px 0 rgba(76,76,75,.1);*/
+/*}*/
+.ours-logo{
+    background: url("../images/ours-logo.html") no-repeat;
+    background-size: 156px 96px;
+    background-position: 0 -48px;
+    width: 156px;
+    height: 48px;
+    display: inline-block;
+    margin-top: 16px;
+    vertical-align: top;
+    font-size: 0;
+    float: left;
+}
+
+.ours-logo a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.qw-logo-info {
+    background: url(../images/qw-logo.html) no-repeat;
+    width: 110px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+    margin-left: 20px;
+    float: left;
+}
+/*.app-header-with-shadow .ours-logo, .header-nav:hover .ours-logo{*/
+    /*background-position: 0 -48px;*/
+/*}*/
+.nav-menu{
+    height: 100%;
+    display: block;
+    color: #ffffff;
+    float: left;
+    font-size: 0;
+    margin-left: 50px;
+}
+.nav-menu ul{
+    display: inline-block;
+    vertical-align: top;
+}
+.nav-menu ul li{
+    min-width: 100px;
+    height: 80px;
+    padding: 0 20px;
+    line-height: 80px;
+    font-size: 16px;
+    display: block;
+    float: left;
+    text-align: center;
+    color: rgba(255,255,255,1);
+    position: relative;
+}
+.header-nav .nav-menu ul li a{
+    color: #515151;
+}
+.header-iframe{
+    width: 100%;
+    height: 163px;
+}
+/*.app-header-with-shadow .nav-menu ul li, .header-nav:hover .nav-menu ul li,*/
+/*.app-header-with-shadow .nav-menu ul li a, .header-nav:hover .nav-menu ul li a{*/
+    /*color: #515151;*/
+/*}*/
+.header-nav .nav-menu ul li a.active,
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active{
+    color: #1b8bf9;
+}
+.nav-button-area{
+    display: block;
+    font-size: 0;
+    float: right;
+}
+.index-reg-button,
+.index-log-button{
+    width: 90px;
+    height: 30px;
+    line-height: 28px;
+    margin-left: 10px;
+    margin-top: 27px;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    vertical-align: top;
+    color: #1b8bf9;
+}
+.index-reg-button{
+    border: 1px solid #1b8bf9;
+    margin-right: 20px;
+}
+.index-reg-button:hover{
+    border-color: #1b8bf9;
+    color: #1b8bf9;
+}
+.index-log-button{
+    color: #ffffff;
+    border: 1px solid transparent;
+    background-color: #1b8bf9;
+}
+
+.nav-menu ul li dl{
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden;
+    -webkit-transition: all .23s ease;
+    -moz-transition: all .23s ease;
+    transition: all .23s ease;
+}
+.nav-menu ul li:hover dl{
+    opacity: 1;
+    filter: alpha(opacity=100);
+    visibility: visible;
+}
+.nav-menu ul li dl dt{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    color: #1b8bf9;
+}
+.nav-menu ul li dl dd{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+.header-nav .nav-menu ul li dl dd a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #515151;
+}
+
+.header-nav:hover .nav-menu ul li dl dd a:hover{
+    background-color: #e6f2fd;
+    color: #515151;
+}
+.nav-menu .more-nav{
+    background: url("../images/nav-arrow.html") no-repeat;
+    background-size: 22px 66px;
+    background-position: 0 -22px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.nav-menu ul li:nth-of-type(2):hover .more-nav{
+    background-position: 0 0;
+}
+
+/*.header-nav:hover .nav-menu .more-nav{*/
+    /*background-position: 0 0;*/
+/*}*/
+.header-iframe iframe{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/*导航条--结束*/
+
+/*右侧固定联系方式--开始*/
+.fixed_sider_nav {
+    position: fixed;
+    top: 60%;
+    right: 0;
+    z-index: 99;
+}
+
+.fixed_sider_nav .inner {
+    position: relative;
+}
+
+.fixed_sider_nav .li_1 {
+    position: absolute;
+    top: 0;
+    right: -2px;
+}
+
+.fixed_sider_nav .li_1 .ewm_person{
+    position: absolute;
+    top: 0;
+    left: -135px;
+    display: none;
+}
+
+.fixed_sider_nav .li_1 .ewm_enterprise{
+    position: absolute;
+    top: 0;
+    left: -270px;
+    display: none;
+}
+
+.fixed_sider_nav .li_1:hover .ewm_person {
+    display: block;
+}
+
+.fixed_sider_nav .li_1:hover .ewm_enterprise {
+    display: block;
+}
+
+.fixed_sider_nav .li_2 {
+    position: absolute;
+    top: 58px;
+    right: -112px;
+}
+
+.fixed_sider_nav .li_2:hover {
+    right: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.fixed_sider_nav .li_3 {
+    position: absolute;
+    top: 116px;
+    right: -97px;
+}
+
+.fixed_sider_nav .li_3:hover {
+    right: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+/*右侧固定联系方式--结束*/
+
+
+/*静态页面底部导航样式*/
+.footer-info{
+    width: 100%;
+    overflow: hidden;
+}
+.footer-iframe{
+    width: 100%;
+    height: 326px;
+    border: 0;
+    float: left;
+}
+/*问号灰色*/
+div.question-help{
+    background: #b9b9b9;
+    width: 16px;
+    height: 16px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    font-family: arial, verdana, sans-serif;
+    display: inline-block;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 0;
+    cursor: default;
+    position: relative;
+    top: 0;
+    margin-top: 0;
+}
+div.question-help div.question-content{
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    background: #5b5b5b;
+    padding: 5px;
+    min-width: 95px;
+    min-height: 30px;
+    font-size: 13px;
+    line-height: 1.4;
+    position: absolute;
+    left: 26px;
+    top: -6px;
+    color: #ffffff;
+    z-index: 400;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: left;
+    white-space: normal;
+    display: none;
+}
+div.question-help div.question-content div.question-wapper{
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #5b5b5b;
+    position: absolute;
+    left: -8px;
+    top: 7px;
+}
+div.question-help:hover div.question-content{
+    display: block;
+}
+/*问号灰色*/
+.banner-btn{
+    background: #FB8C00;
+    width: 160px;
+    height: 46px;
+    line-height: 44px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    outline: none;
+    display: inline-block;
+    margin: 10px auto 0 auto;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
+.banner-btn:hover{
+    background: #fb981b;
+}
